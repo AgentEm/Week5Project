@@ -19,7 +19,7 @@
 
       <div class="full">
           <!-- first image is viewable to start -->
-          <img src="images/fashion/top1large.jpg" />
+          <img class="previewFull" src="images/fashion/top1large.jpg" />
       </div>
 
     </div>
@@ -29,11 +29,12 @@
   <script src="fancybox/jquery.fancybox.js?v=2.1.4"></script>
   <script>
     $(function() {
-      $('.preview a').on('click',function(e){
-        var src = $(this).data('src');
-        $('img.previewFull').attr('src',src);
-
+      $('.previews a').on('click',function(e){
+        e.preventDefault();
+        var src = $(this).data('data-full');
+        $('img.previewFull').attr('src', src);
       });
+      
     });
   </script>
 </body>
