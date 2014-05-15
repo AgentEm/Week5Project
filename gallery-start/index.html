@@ -31,8 +31,8 @@
     $(function() {
       $('.previews a').on('click',function(e){
         e.preventDefault();
-        var src = $(this).data('data-full');
-        $('img.previewFull').attr('src', src);
+        var src = $(this).data('full');
+        $('img.previewFull').attr("src", src); //replace images/etc. with whatever small image is clicked. This needs to be in the form of a variable src. 
       });
       
     });
