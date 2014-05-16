@@ -35,15 +35,31 @@
         
         var src = $(this).data('full');
         // value of data-full is stored in src
-        $('img.previewFull').attr('src', src);
+        $('img.previewFull').attr('src', src).hide().fadeIn("slow");
+
         // make img.previewFull an object apply the attribute method and in src attribute pass src variable (data-full)
+        // $(".previews a").on("click", function(){
+        //   $(".previewFull").fadeIn("slow", function(){
+        //     console.log("this is working");
+        //   });
+        // });
       });
 
       $('.previews a').on('click', function(){
         $('.previews a').removeClass('selected');
         $(this).addClass('selected');
         //take .previews a and on click, removeClass selected and addClass to whatever you clicked (needs to be it's own event)
+
+        // $(".previewFull:hidden:first").fadeIn("slow");
+        // console.log("jumanji");
       });
+
+      // $(".previews a").on("click", function(){
+      //   $("img.previewFull:hidden:first").fadeIn(1800);
+      //     console.log("jumanji");
+      // });
+
+
 
       $(".fancybox").fancybox({});
 
