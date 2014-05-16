@@ -20,7 +20,7 @@
 
       <div class="full">
           <!-- first image is viewable to start -->
-          <a href="#"><img class="previewFull" src="images/fashion/top1large.jpg" /></a>
+          <a class="fancybox" href="images/fashion/top1large.jpg"><img class="previewFull" src="images/fashion/top1large.jpg" /></a>
       </div>
 
     </div>
@@ -44,9 +44,14 @@
         $(this).addClass('selected');
         //take .previews a and on click, removeClass selected and addClass to whatever you clicked (needs to be it's own event)
       });
-      $('img.previewFull').on("click", function(){
-        $('img.previewFull').fancybox();
-      });
+
+
+      $(".fancybox").fancybox({});
+
+      // $("a.fancybox-item.fancybox-close").on("click", function (){
+      //   $("a img.previewFull").css({"display":"block"});
+      //   console.log("cat Babies!");
+      // });
 
 
 
