@@ -29,12 +29,33 @@
   <script src="fancybox/jquery.fancybox.js?v=2.1.4"></script>
   <script>
     $(function() {
-      $('.previews a').on('click',function(e){
+      $('.previews a').on('click', function(e){
         e.preventDefault();
+        
         var src = $(this).data('full');
-        $('img.previewFull').attr("src", src); //replace images/etc. with whatever small image is clicked. This needs to be in the form of a variable src. 
+        // value of data-full is stored in src
+        $('img.previewFull').attr('src', src);
+        // make img.previewFull an object apply the attribute method and in src attribute pass src variable (data-full)
       });
+
+      $('.previews a').on('click', function(){
+        $('.previews a').removeClass('selected');
+        $(this).addClass('selected');
+        //take .previews a and on click, removeClass selected and addClass to whatever you clicked (needs to be it's own event)
+      });
+
+
+
+
+
+      // $(this).addClass('selected');
+      // $(this).prev().removeClass('selected');
+
+
       
+      // $('.previewFull').on('click', function(){
+      //   .fancybox.open(src);
+      // });
     });
   </script>
 </body>
