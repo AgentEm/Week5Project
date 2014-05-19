@@ -26,15 +26,31 @@
 
     </div>
     <div class="sidebar">
-      <h2>ABOUT GEORGE</h2>
-      <p>George is a sweet and lovable character, just waiting for the right home! He loves to cuddle and play in the grass, but he doesn't do well with other kitties. George would work best in a home with no other pets, as he is a bit of a narcissist, and requires lots of attention.</p>
-      <ul>
-        <li><img src="images/statsImages/catIcon/icon_17811.svg" /><p>Tabby</p></li>
-        <li><span><img src="images/statsImages/calendarIcon/icon_6869.svg" alt=""></span><p>5 years old</p></img></li>
-        <li><img src="images/statsImages/manIcon/icon_13740.svg" alt=""><p>Male</p></img></li>
-        <li><img src="images/statsImages/rulerIcon/icon_29633.svg" alt=""><p>Medium</p></img></li>
-      </ul>
-      <div class="button">Adopt Now</div>
+
+      <div class="George">
+        <h2>ABOUT GEORGE</h2>
+        <p>George is a sweet and lovable character, just waiting for the right home! He loves to cuddle and play in the grass, but he doesn't do well with other kitties. George would work best in a home with no other pets, as he is a bit of a narcissist, and requires lots of attention.</p>
+        <ul>
+          <li><img src="images/statsImages/catIcon/icon_17811.svg" /><p>Tabby</p></li>
+          <li><span><img src="images/statsImages/calendarIcon/icon_6869.svg" alt=""></span><p>5 years old</p></img></li>
+          <li><img src="images/statsImages/manIcon/icon_13740.svg" alt=""><p>Male</p></img></li>
+          <li><img src="images/statsImages/rulerIcon/icon_29633.svg" alt=""><p>Medium</p></img></li>
+        </ul>
+        <div class="button">Adopt Now</div>
+      </div>
+
+      <div class="Jasper">
+        <h2>ABOUT JASPER</h2>
+        <p>George is a sweet and lovable character, just waiting for the right home! He loves to cuddle and play in the grass, but he doesn't do well with other kitties. George would work best in a home with no other pets, as he is a bit of a narcissist, and requires lots of attention.</p>
+        <ul>
+          <li><img src="images/statsImages/catIcon/icon_17811.svg" /><p>Tabby</p></li>
+          <li><span><img src="images/statsImages/calendarIcon/icon_6869.svg" alt=""></span><p>5 years old</p></img></li>
+          <li><img src="images/statsImages/manIcon/icon_13740.svg" alt=""><p>Male</p></img></li>
+          <li><img src="images/statsImages/rulerIcon/icon_29633.svg" alt=""><p>Medium</p></img></li>
+        </ul>
+        <div class="button">Adopt Now</div>
+      </div>
+
     </div>
   </div>
 
@@ -51,11 +67,7 @@
         $('.full a').attr('href', src);
 
         // make img.previewFull an object apply the attribute method and in src attribute pass src variable (data-full)
-        // $(".previews a").on("click", function(){
-        //   $(".previewFull").fadeIn("slow", function(){
-        //     console.log("this is working");
-        //   });
-        // });
+
       });
 
       $('.previews a').on('click', function(){
@@ -63,35 +75,11 @@
         $(this).addClass('selected');
         //take .previews a and on click, removeClass selected and addClass to whatever you clicked (needs to be it's own event)
 
-        // $(".previewFull:hidden:first").fadeIn("slow");
-        // console.log("jumanji");
-      });
+        $(this).show()
 
-      // $(".previews a").on("click", function(){
-      //   $("img.previewFull:hidden:first").fadeIn(1800);
-      //     console.log("jumanji");
-      // });
+        $(".fancybox").fancybox({});
 
 
-
-      $(".fancybox").fancybox({});
-
-      // $("a.fancybox-item.fancybox-close").on("click", function (){
-      //   $("a img.previewFull").css({"display":"block"});
-      //   console.log("cat Babies!");
-      // });
-
-
-
-
-      // $(this).addClass('selected');
-      // $(this).prev().removeClass('selected');
-
-
-      
-      // $('.previewFull').on('click', function(){
-      //   .fancybox.open(src);
-      // });
     });
   </script>
 </body>
