@@ -36,6 +36,7 @@
         var src = $(this).data('full');
         // value of data-full is stored in src
         $('img.previewFull').attr('src', src).hide().fadeIn("slow");
+        $('.full a').attr('href', src);
 
         // make img.previewFull an object apply the attribute method and in src attribute pass src variable (data-full)
         // $(".previews a").on("click", function(){
