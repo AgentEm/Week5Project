@@ -16,12 +16,18 @@ body {
   background-image: url('images/45degreee_fabric_@2X.png');
   color:#FFF;
 }
+
 h1 {
   font-size: 2.5em;
 }
+
 h2 {
   text-align: center;
 }
+
+/*.sidebar ul span {
+  width: 20%;
+}*/
 
 .container {
     margin:2%;
@@ -33,23 +39,42 @@ h2 {
 
 .sidebar {
   float: left;
-  background: green;
+  /*background: green;*/
   width: 35%;
   margin-top: 151px;
 }
+
+.sidebar p {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+.sidebar h2 {
+  font-size: 2em;
+  margin: 10px;
+}
+
 .sidebar ul {
   list-style: none;
   padding-left: 0;
 }
+
 .sidebar ul p {
   vertical-align: top;
   display:inline-block;
   font-size: 1.3em;
-  
+  padding-left: 10px;
 }
+
+.sidebar ul li {
+  padding-top: 10px;
+  border-bottom: 1px solid black;
+}
+
 .sidebar img {
   width:15%;
 }
+
 .gallery {
   /*background: pink;*/
   margin-right: 3%;
