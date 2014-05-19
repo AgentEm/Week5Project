@@ -12,24 +12,40 @@
    clear: both;
 }
 
+body {
+  background-image: url('images/45degreee_fabric_@2X.png');
+}
+
 
 .container {
-    width: 850px;
-    margin: 0 auto;
+    /*width: 1024px;*/
+    background: orange;
+    /*margin: 0 auto;*/
+    margin-left: 50px;
     padding: 20px;
     padding-bottom: 40px;
     font-family: 'Calibri','CalibriRegular',Verdana,Arial,Helvetica,sans-serif;
 }
 
-.gallery {
-  
+.sidebar {
+  float: left;
+  background: green;
+  width: 35%;
+  margin-top: 151px;
+}
 
+.gallery {
+  /*background: pink;*/
+  margin-right: 3%;
+  float: left;
+  width: 60%;
 }
 
 .previews, .full, .desc {
     /*float: left;*/
     /*margin-right: 10px;*/
     margin-bottom: 25px;
+
 }
 
 .desc, .full {
@@ -44,6 +60,8 @@
 
 .previews {
   clear:both;
+ /* background: yellow;*/
+  text-align: center;
 }
 
 .previews a {
@@ -64,6 +82,7 @@
 
 .full, .full img {
     /*height: 600px;*/
+    width: 100%;
 }
 
 .previews a, .full {
@@ -76,12 +95,4 @@
 
 .full img:hover {
     cursor: pointer;
-}
-
-.clearfix:after {
-   content: ".";
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
 }
