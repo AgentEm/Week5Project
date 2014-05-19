@@ -14,14 +14,18 @@
 
 body {
   background-image: url('images/45degreee_fabric_@2X.png');
+  color:#FFF;
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  text-align: center;
 }
 
-
 .container {
-    /*width: 1024px;*/
-    background: orange;
-    /*margin: 0 auto;*/
-    margin-left: 50px;
+    margin:2%;
+    background: #21AABD;
     padding: 20px;
     padding-bottom: 40px;
     font-family: 'Calibri','CalibriRegular',Verdana,Arial,Helvetica,sans-serif;
@@ -33,7 +37,19 @@ body {
   width: 35%;
   margin-top: 151px;
 }
-
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+.sidebar ul p {
+  vertical-align: top;
+  display:inline-block;
+  font-size: 1.3em;
+  
+}
+.sidebar img {
+  width:15%;
+}
 .gallery {
   /*background: pink;*/
   margin-right: 3%;
@@ -70,6 +86,10 @@ body {
     margin-top:3em;
     margin-right: 1%;
     font-size: 0;
+    width:18%;
+}
+.previews a img {
+  width:100%;
 }
 
 #last {
