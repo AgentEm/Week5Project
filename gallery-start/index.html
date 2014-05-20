@@ -25,6 +25,7 @@
       </div>
 
     </div>
+
     <div class="sidebar sidebar-cat2">
       <h2>ABOUT GEORGE</h2>
       <p>George is a sweet and lovable character, just waiting for the right home! He loves to cuddle and play in the grass, but he doesn't do well with other kitties. George would work best in a home with no other pets, as he is a bit of a narcissist, and requires lots of attention.</p>
@@ -34,19 +35,56 @@
         <li><img src="images/statsImages/manIcon/icon_13740.svg" alt=""><p>Male</p></img></li>
         <li><img src="images/statsImages/rulerIcon/icon_29633.svg" alt=""><p>Medium</p></img></li>
       </ul>
-      <div class="button">Adopt Now</div>
+      <div class="button"><a href="#">Adopt Now</a></div>
     </div>
-    <div class="sidebar sidebar-bunny">
+
+    <div class="sidebar sidebar-bunny hidden">
       <h2>ABOUT JASPER</h2>
-      <p>George is a sweet and lovable character, just waiting for the right home! He loves to cuddle and play in the grass, but he doesn't do well with other kitties. George would work best in a home with no other pets, as he is a bit of a narcissist, and requires lots of attention.</p>
+      <p>Our favourite bunny-about-town, Jasper, enjoys lettuce, hopping around, and lady bunnies. He is well-mannered and would adjust well to just about any happy and healthy environment. Jasper is eager to find his forever home - click the link below to adopt him today!</p>
       <ul>
-        <li><img src="images/statsImages/catIcon/icon_17811.svg" /><p>Tabby</p></li>
-        <li><span><img src="images/statsImages/calendarIcon/icon_6869.svg" alt=""></span><p>5 years old</p></img></li>
+        <li><img src="images/statsImages/rabbitIcon/icon_9123.svg" /><p>American Blue</p></li>
+        <li><span><img src="images/statsImages/calendarIcon/icon_6869.svg" alt=""></span><p>2 years old</p></img></li>
         <li><img src="images/statsImages/manIcon/icon_13740.svg" alt=""><p>Male</p></img></li>
-        <li><img src="images/statsImages/rulerIcon/icon_29633.svg" alt=""><p>Medium</p></img></li>
+        <li><img src="images/statsImages/rulerIcon/icon_29633.svg" alt=""><p>Small</p></img></li>
       </ul>
-      <div class="button">Adopt Now</div>
+      <div class="button"><a href="#">Adopt Now</a></div>
     </div>
+
+  <div class="sidebar sidebar-cat1 hidden">
+    <h2>ABOUT JUMANJI</h2>
+    <p>Jumanji is a one-of-a-kind kitty, having previously been owned by Her Royal Highness, Queen Elizabeth II. But don't worry - while Jumanji does have royal manners, she's no snob! Her favourite passtime is lounging in the sun, but she can be more active at night, so light sleepers be warned. Jumanji will do best in a quiet home, mimicing her birthplace where she had lots of room in the Palace to make her own.</p>
+    <ul>
+      <li><img src="images/statsImages/catIcon/icon_17811.svg" /><p>Tabby</p></li>
+      <li><span><img src="images/statsImages/calendarIcon/icon_6869.svg" alt=""></span><p>10 years old</p></img></li>
+      <li><img src="images/statsImages/manIcon/icon_13740.svg" alt=""><p>Female</p></img></li>
+      <li><img src="images/statsImages/rulerIcon/icon_29633.svg" alt=""><p>Medium</p></img></li>
+    </ul>
+    <div class="button"><a href="#">Adopt Now</a></div>
+  </div>
+
+  <div class="sidebar sidebar-dog1 hidden">
+    <h2>ABOUT HUNTER</h2>
+    <p>This little doggy loves to go to market! Haha! Or anywhere else you want to go - he's full of energy and ready for an adventure. Hunter will love living with a larger family, and in a home with lots of yard space for him to run around and play. He would be ideal for a family with younger children who could keep up with him. Find out more about Hunter below!</p>
+    <ul>
+      <li><img src="images/statsImages/dogIcon/icon_364.svg" /><p>Black Lab</p></li>
+      <li><span><img src="images/statsImages/calendarIcon/icon_6869.svg" alt=""></span><p>5 years old</p></img></li>
+      <li><img src="images/statsImages/manIcon/icon_13740.svg" alt=""><p>Male</p></img></li>
+      <li><img src="images/statsImages/rulerIcon/icon_29633.svg" alt=""><p>Large</p></img></li>
+    </ul>
+    <div class="button"><a href="#">Adopt Now</a></div>
+  </div>
+
+
+  <div class="sidebar sidebar-dog2 hidden">
+    <h2>ABOUT CHAMP</h2>
+    <p>Champ is a special needs dog hat requires extra care. He's extremely friendly, but will need shots every day to keep him in tip-top shape. Because of this, Champ can only be adopted to a home willing to commit fully to his needs. That being said, Champ lives up to his name, and would be a wonderful addition to any caring home. His favourite activities are swimming outside, and playing fetch.</p>
+    <ul>
+      <li><img src="images/statsImages/dogIcon/icon_364.svg" /><p>Mix</p></li>
+      <li><span><img src="images/statsImages/calendarIcon/icon_6869.svg" alt=""></span><p>4 years old</p></img></li>
+      <li><img src="images/statsImages/manIcon/icon_13740.svg" alt=""><p>Male</p></img></li>
+      <li><img src="images/statsImages/rulerIcon/icon_29633.svg" alt=""><p>Medium</p></img></li>
+    </ul>
+    <div class="button"><a href="#">Adopt Now</a></div>
   </div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -61,52 +99,19 @@
         $('img.previewFull').attr('src', src).hide().fadeIn("slow");
         $('.full a').attr('href', src);
 
-        // make img.previewFull an object apply the attribute method and in src attribute pass src variable (data-full)
-        // $(".previews a").on("click", function(){
-        //   $(".previewFull").fadeIn("slow", function(){
-        //     console.log("this is working");
-        //   });
-        // });
       });
 
       $('.previews a').on('click', function(){
         $('.previews a').removeClass('selected');
         $(this).addClass('selected');
+        //take .previews a and on click, removeClass selected and addClass to whatever you clicked (needs to be it's own event)
 
         var animal = $(this).attr("data-animal");
         $(".sidebar").hide();
         $(".sidebar-" + animal).show();
-        //take .previews a and on click, removeClass selected and addClass to whatever you clicked (needs to be it's own event)
-
-        // $(".previewFull:hidden:first").fadeIn("slow");
-        // console.log("jumanji");
       });
 
-      // $(".previews a").on("click", function(){
-      //   $("img.previewFull:hidden:first").fadeIn(1800);
-      //     console.log("jumanji");
-      // });
-
-
-
       $(".fancybox").fancybox({});
-
-      // $("a.fancybox-item.fancybox-close").on("click", function (){
-      //   $("a img.previewFull").css({"display":"block"});
-      //   console.log("cat Babies!");
-      // });
-
-
-
-
-      // $(this).addClass('selected');
-      // $(this).prev().removeClass('selected');
-
-
-      
-      // $('.previewFull').on('click', function(){
-      //   .fancybox.open(src);
-      // });
     });
   </script>
 </body>
